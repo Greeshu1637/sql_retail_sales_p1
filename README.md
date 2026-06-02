@@ -12,7 +12,18 @@ This project analyzes retail sales data using SQL to understand customer behavio
 ## Tools Used
 - SQL (PostgreSQL / MySQL)
 - Relational Database Concepts
+  
+## Dataset
 
+The dataset used in this project contains retail sales transaction data, including:
+- Transaction date and time
+- Customer details
+- Product category
+- Quantity and pricing information
+- Total sales value
+
+File used:
+- `SQL - Retail Sales Analysis_utf.csv`
 ## Project Files
 - database_setup.sql → Database and table creation
 - data_cleaning.sql → Null checks and data cleaning
@@ -27,3 +38,11 @@ This project analyzes retail sales data using SQL to understand customer behavio
 ## Author
 Greeshma Polanki  
 LinkedIn: https://www.linkedin.com/in/greeshma-polanki-7931a8373
+## Skills Demonstrated
+
+- Database design and table creation
+- Data cleaning and validation using SQL
+- Exploratory Data Analysis (EDA)
+- Window functions and aggregations
+- Business-oriented problem solving
+ This project reflects my ability to work with real-world data, write clean SQL queries, and extract meaningful business insights from raw datasets.
