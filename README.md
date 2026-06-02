@@ -24,10 +24,11 @@ This project is designed to demonstrate SQL skills and techniques typically used
 
 ```sql
 CREATE DATABASE p1_retail_db;
+USE p1_retail_db;
 
 CREATE TABLE retail_sales
 (
-    transactions_id INT PRIMARY KEY,
+    transaction_id INT PRIMARY KEY,
     sale_date DATE,	
     sale_time TIME,
     customer_id INT,	
@@ -53,17 +54,32 @@ SELECT COUNT(*) FROM retail_sales;
 SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
 SELECT DISTINCT category FROM retail_sales;
 
-SELECT * FROM retail_sales
+SELECT * 
+FROM retail_sales
 WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
+    sale_date IS NULL OR 
+    sale_time IS NULL OR 
+    customer_id IS NULL OR 
+    gender IS NULL OR 
+    age IS NULL OR 
+    category IS NULL OR 
+    quantity IS NULL OR 
+    price_per_unit IS NULL OR 
+    cogs IS NULL OR
+    total_sale IS NULL;
 
 DELETE FROM retail_sales
 WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
+    sale_date IS NULL OR 
+    sale_time IS NULL OR 
+    customer_id IS NULL OR 
+    gender IS NULL OR 
+    age IS NULL OR 
+    category IS NULL OR 
+    quantity IS NULL OR 
+    price_per_unit IS NULL OR 
+    cogs IS NULL OR
+    total_sale IS NULL;
 ```
 
 ### 3. Data Analysis & Findings
@@ -77,7 +93,7 @@ FROM retail_sales
 WHERE sale_date = '2022-11-05';
 ```
 
-2. **Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022**:
+2. **Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 3 in the month of Nov-2022**:
 ```sql
 SELECT 
   *
@@ -87,7 +103,7 @@ WHERE
     AND 
     TO_CHAR(sale_date, 'YYYY-MM') = '2022-11'
     AND
-    quantity >= 4
+   quantity > 3
 ```
 
 3. **Write a SQL query to calculate the total sales (total_sale) for each category.**:
@@ -97,7 +113,7 @@ SELECT
     SUM(total_sale) as net_sale,
     COUNT(*) as total_orders
 FROM retail_sales
-GROUP BY 1
+GROUP BY 1;
 ```
 
 4. **Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.**:
@@ -124,27 +140,30 @@ FROM retail_sales
 GROUP 
     BY 
     category,
-    gender
+    gender;
 ORDER BY 1
 ```
 
 7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**:
 ```sql
 SELECT 
-       year,
-       month,
+    year,
+    month,
     avg_sale
 FROM 
 (    
-SELECT 
-    EXTRACT(YEAR FROM sale_date) as year,
-    EXTRACT(MONTH FROM sale_date) as month,
-    AVG(total_sale) as avg_sale,
-    RANK() OVER(PARTITION BY EXTRACT(YEAR FROM sale_date) ORDER BY AVG(total_sale) DESC) as rank
-FROM retail_sales
-GROUP BY 1, 2
-) as t1
-WHERE rank = 1
+    SELECT 
+        EXTRACT(YEAR FROM sale_date) AS year,
+        EXTRACT(MONTH FROM sale_date) AS month,
+        AVG(total_sale) AS avg_sale,
+        RANK() OVER (
+            PARTITION BY EXTRACT(YEAR FROM sale_date) 
+            ORDER BY AVG(total_sale) DESC
+        ) AS sales_rank
+    FROM retail_sales
+    GROUP BY 1, 2
+) t
+WHERE sales_rank = 1;
 ```
 
 8. **Write a SQL query to find the top 5 customers based on the highest total sales **:
@@ -210,18 +229,17 @@ This project serves as a comprehensive introduction to SQL for data analysts, co
 2. **Set Up the Database**: Run the SQL scripts provided in the `database_setup.sql` file to create and populate the database.
 3. **Run the Queries**: Use the SQL queries provided in the `analysis_queries.sql` file to perform your analysis.
 4. **Explore and Modify**: Feel free to modify the queries to explore different aspects of the dataset or answer additional business questions.
+5. 
+## Author
 
-## Author - Zero Analyst
+**Greeshma Polanki**  
+Aspiring Data Scientist | SQL | Python | Data Analytics
 
 This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
 
-### Stay Updated and Join the Community
 
-For more content on SQL, data analysis, and other data-related topics, make sure to follow me on social media and join our community:
 
-- **YouTube**: [Subscribe to my channel for tutorials and insights](https://www.youtube.com/@zero_analyst)
-- **Instagram**: [Follow me for daily tips and updates](https://www.instagram.com/zero_analyst/)
-- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/najirr)
-- **Discord**: [Join our community to learn and grow together](https://discord.gg/36h5f2Z5PK)
+- **LinkedIn**: https://www.linkedin.com/in/greeshma-polanki-7931a8373
 
-Thank you for your support, and I look forward to connecting with you!
+
+
