@@ -405,6 +405,29 @@ After completing the cleaning process:
 - No missing values remained in the analytical dataset.
 - The cleaned data was ready for exploratory analysis and business reporting.
 
+## Sample EDA Queries
+
+### Total Transactions
+
+![Total Transactions](images/eda_total_transactions.png)
+
+---
+
+### Unique Customers
+
+![Customers](images/eda_customers.png)
+
+---
+
+### Product Categories
+
+![Categories](images/eda_categories.png)
+
+---
+
+### Dataset Time Period
+
+![Date Range](images/eda_date_range.png)
 ![Data Cleaning](images/data_cleaning.png)
 
 ## 🎓 What I Learned
