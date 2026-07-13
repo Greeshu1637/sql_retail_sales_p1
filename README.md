@@ -1,16 +1,4 @@
-# 📊 Retail Sales Performance Analysis using SQL (PostgreSQL)
-
-## 📌 Project Summary
-
-| Feature | Details |
-|---------|----------|
-| Database | PostgreSQL |
-| Tool | pgAdmin 4 |
-| Dataset | Retail Sales Transactions |
-| Project Type | End-to-End SQL Data Analysis |
-| SQL Queries | 15+ |
-| Business Questions Solved | 15 |
-| Data Cleaning Steps | 3 |
+# 🛒 Retail Sales Analysis using SQL (PostgreSQL)
 
 ## 📌 Project Overview
 
@@ -142,88 +130,188 @@ Key Insights
 Business Recommendations
 
 ---
+# 🗄️ Database Design
 
-## 📁 Repository Structure
----
-sql_retail_sales_p1/
+## Database Overview
 
-├── README.md
-├── database_setup.sql
-├── data_cleaning.sql
-├── analysis_queries.sql
-├── insights.md
-├── SQL - Retail Sales Analysis_utf.csv
-└── images/
+A PostgreSQL database was created to store and analyze the retail sales dataset in a structured format. The database was designed to support efficient querying, data validation, and business analysis.
+
+The project consists of a single transactional table named **retail_sales**, where each row represents one completed customer purchase.
+
+Although this project uses a single-table design, the database structure follows standard relational database principles with clearly defined columns and appropriate data types.
 
 ---
-## 🗄️ Database Design
 
-The project uses a PostgreSQL table named **retail_sales** to store transactional sales data.
+## Database Schema
 
-Each record represents a single customer purchase and contains customer demographics, product information, pricing details, and sales metrics.
-
----
-### Table Schema
-
-## 🖼️ Database Schema
-
-> *(Database schema image will be added here.)*
-
-<!-- Example:
-![Database Schema](images/database_schema.png)
--->
-
-| Column | Description |
-|---------|-------------|
-| transaction_id | Unique transaction identifier |
-| sale_date | Date of purchase |
-| sale_time | Time of purchase |
-| customer_id | Customer identifier |
-| gender | Customer gender |
-| age | Customer age |
-| category | Product category |
-| quantity | Quantity purchased |
-| price_per_unit | Selling price per unit |
-| cogs | Cost of goods sold |
-| total_sale | Total sales amount |
+| Column Name     | Data Type | Description                            |
+| --------------- | --------- | -------------------------------------- |
+| transactions_id | INTEGER   | Unique identifier for each transaction |
+| sale_date       | DATE      | Date on which the purchase was made    |
+| sale_time       | TIME      | Time at which the purchase occurred    |
+| customer_id     | INTEGER   | Unique identifier for each customer    |
+| gender          | VARCHAR   | Gender of the customer                 |
+| age             | INTEGER   | Customer age                           |
+| category        | VARCHAR   | Product category purchased             |
+| quantity        | INTEGER   | Number of products purchased           |
+| price_per_unit  | NUMERIC   | Selling price of a single unit         |
+| cogs            | NUMERIC   | Cost of goods sold                     |
+| total_sale      | NUMERIC   | Total transaction amount               |
 
 ---
-## 🎓 Key Learnings
 
-Through this project, I strengthened my ability to:
+## Primary Key
 
-- Design relational databases using PostgreSQL.
-- Clean and validate transactional datasets.
-- Write optimized SQL queries for business analysis.
-- Perform exploratory data analysis (EDA).
-- Translate business questions into analytical SQL queries.
-- Derive actionable business insights from sales data.
-- Organize and document a complete analytics project using GitHub.
+The **transactions_id** column serves as the Primary Key for the table.
 
----
-## 🚀 Future Enhancements
+This ensures:
 
-Future improvements planned for this project include:
-
-- Develop an interactive Power BI dashboard for sales visualization.
-- Perform customer segmentation using SQL and Python.
-- Implement sales forecasting using machine learning techniques.
-- Optimize SQL queries for large-scale datasets.
-- Automate reporting workflows using Python.
+* Every transaction is uniquely identified.
+* Duplicate transaction records can be detected easily.
+* Data integrity is maintained throughout the analysis.
 
 ---
-## 💡 Business Recommendations
 
-Based on the analysis:
+## Table Structure
 
-- Increase inventory levels for consistently high-performing product categories.
-- Design targeted marketing campaigns for high-value customer segments.
-- Optimize stock planning before seasonal peak sales periods.
-- Introduce loyalty programs to improve customer retention.
-- Investigate underperforming product categories to identify opportunities for growth.
+The table stores transactional information required for retail sales analysis.
 
-## 📌 Conclusion
+Each record contains:
 
-This project demonstrates how SQL can be used to transform raw retail transaction data into meaningful business insights. By following a structured workflow—from database creation and data cleaning to exploratory analysis and business reporting—I gained practical experience in solving real-world business problems using PostgreSQL.
+* Customer information
+* Purchase date and time
+* Product category
+* Quantity purchased
+* Pricing information
+* Revenue generated
 
-The project strengthened my analytical thinking, SQL proficiency, and ability to communicate data-driven insights, providing a solid foundation for future Data Analytics and Business Intelligence projects.
+This structure enables business analysis across multiple dimensions, including customer demographics, product performance, sales trends, and revenue distribution.
+
+---
+
+## Why PostgreSQL?
+
+This project was implemented using **PostgreSQL** and managed through **pgAdmin 4**.
+
+PostgreSQL was selected because it offers:
+
+* Strong SQL standards compliance
+* Reliable handling of large datasets
+* Powerful aggregation and analytical functions
+* Excellent support for data integrity
+* Advanced querying capabilities used in real-world analytics projects
+
+Working with PostgreSQL also provided practical experience using an enterprise-grade relational database management system commonly adopted across industry.
+
+---
+
+## Database Creation Process
+
+The database setup involved the following steps:
+
+1. Creating a new PostgreSQL database.
+2. Creating the `retail_sales` table with appropriate data types.
+3. Defining the Primary Key.
+4. Importing the CSV dataset into PostgreSQL using pgAdmin 4.
+5. Verifying successful data import.
+6. Validating the table structure and row count before beginning analysis.
+
+---
+
+## Data Dictionary
+
+### transactions_id
+
+Unique identifier assigned to each retail transaction.
+
+### sale_date
+
+The calendar date on which the purchase occurred.
+
+### sale_time
+
+The exact time when the transaction was completed.
+
+### customer_id
+
+Unique identifier representing an individual customer.
+
+### gender
+
+Customer gender recorded for demographic analysis.
+
+### age
+
+Customer age used for age-group segmentation.
+
+### category
+
+Product category purchased during the transaction.
+
+### quantity
+
+Number of units purchased in the transaction.
+
+### price_per_unit
+
+Selling price of one unit of the selected product.
+
+### cogs
+
+Cost incurred by the business for the products sold.
+
+### total_sale
+
+Total revenue generated from the transaction.
+
+---
+
+## Database Architecture
+
+The overall data flow of this project is illustrated below.
+
+```text
+Retail Sales CSV Dataset
+            │
+            ▼
+      PostgreSQL Database
+            │
+            ▼
+      retail_sales Table
+            │
+            ▼
+   Data Validation & Cleaning
+            │
+            ▼
+ Exploratory SQL Analysis
+            │
+            ▼
+ Business Insights
+            │
+            ▼
+ Actionable Recommendations
+```
+
+---
+
+## Skills Demonstrated in this Phase
+
+During the database design phase, the following SQL and database management skills were applied:
+
+* Database creation
+* Table creation
+* Data type selection
+* Primary Key implementation
+* CSV data import
+* Data validation
+* Database documentation
+* PostgreSQL administration using pgAdmin 4
+
+
+## 🎓 What I Learned
+
+Working on this project helped me strengthen my understanding of SQL beyond basic queries. I gained hands-on experience in creating databases, cleaning datasets, analyzing business problems, and communicating insights through structured SQL analysis.
+
+The project also improved my ability to think from a business perspective by converting raw transactional data into meaningful information that can support decision-making.
+
+This project represents an important step in building my portfolio for Data Analyst roles and reflects my practical experience with PostgreSQL and data analysis.
