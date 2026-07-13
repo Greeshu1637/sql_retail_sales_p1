@@ -457,7 +457,108 @@ See `analysis_queries.sql`
 
 ### Result
 
-(Add Screenshot Here)
+![Highest Revenue Category](images/business_q1.png)
+
+
+## 2️⃣ Which Age Group Contributes the Highest Revenue?
+
+### Business Objective
+
+Customer segmentation based on age helps businesses understand which demographic contributes the highest revenue.
+
+### SQL Query
+
+See `analysis_queries.sql`
+
+### Result
+
+(Add Screenshot)
+
+## 3️⃣ Which Hour Records the Highest Number of Sales?
+
+### Business Objective
+
+Knowing peak sales hours helps businesses optimize staffing, inventory availability, and promotional timing.
+
+### Business Insight
+
+Peak shopping hours indicate when customer demand is highest, allowing businesses to improve operational planning.
+
+
+## 4️⃣ What is the Average Order Value for Each Product Category?
+
+### Business Objective
+
+Average order value measures customer spending behavior across product categories.
+
+### Business Insight
+
+Categories with higher average order values contribute more revenue per transaction and may offer better profit opportunities.
+
+
+## 5️⃣ Which Customers Spend the Most?
+
+### Business Objective
+
+Identifying high-value customers helps businesses improve customer retention and loyalty programs.
+
+### Business Insight
+
+The highest-spending customers contribute significantly to total revenue and represent important long-term business relationships.
+
+
+## 6️⃣ Which Product Category Sells the Highest Quantity?
+
+### Business Objective
+
+Understanding product demand helps businesses improve inventory management.
+
+### Business Insight
+
+High-demand categories require efficient stock planning to prevent shortages.
+
+
+## 7️⃣ How Much Revenue Does Each Category Contribute?
+
+### Business Objective
+
+Revenue contribution analysis identifies the importance of each product category.
+
+### Business Insight
+
+Categories contributing the largest percentage of revenue should receive greater business attention.
+
+## 8️⃣ Monthly Revenue Trend
+
+### Business Objective
+
+Analyzing monthly revenue helps identify seasonal sales patterns.
+
+### Business Insight
+
+Understanding monthly trends enables better forecasting and business planning.
+
+
+
+
+## Summary
+
+The business analysis phase transformed raw retail transaction data into meaningful insights that can support strategic decision-making.
+
+Using PostgreSQL, multiple business questions were answered related to customer behavior, product performance, sales trends, and revenue generation.
+
+The results demonstrate how SQL can be used not only for querying data but also for solving real-world business problems.
+
+
+
+
+
+
+
+### Business Insight
+
+The highest revenue-generating age group represents the company's most valuable customer segment and can be targeted with personalized marketing campaigns.
+
 
 ### Business Insight
 
