@@ -110,4 +110,15 @@ FROM retail_sales
 GROUP BY shift
 ORDER BY total_orders DESC;
 
+----------------------------------------------------
+-- Business Question 1
+-- Highest Revenue Category
+----------------------------------------------------
+
+SELECT
+    category,
+    SUM(total_sale) AS total_revenue
+FROM retail_sales
+GROUP BY category
+ORDER BY total_revenue DESC;
 --END PROJECT---
