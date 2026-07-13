@@ -430,6 +430,39 @@ After completing the cleaning process:
 ![Date Range](images/eda_date_range.png)
 ![Data Cleaning](images/data_cleaning.png)
 
+# 📈 Business Analysis
+
+## Overview
+
+After understanding the dataset through Exploratory Data Analysis (EDA), the next step was to answer business-oriented questions using SQL.
+
+The objective of this phase was to identify meaningful patterns in customer purchasing behavior, product performance, and sales trends that could support business decision-making.
+
+The analysis focuses on revenue generation, customer segmentation, product demand, sales performance, and purchasing patterns.
+
+---
+
+## Business Questions
+
+The following business questions were explored using PostgreSQL.
+## 1️⃣ Which Product Category Generates the Highest Revenue?
+
+### Business Objective
+
+Understanding which product category generates the highest revenue helps businesses identify their most profitable products and prioritize inventory, promotions, and marketing efforts.
+
+### SQL Query
+
+See `analysis_queries.sql`
+
+### Result
+
+(Add Screenshot Here)
+
+### Business Insight
+
+The analysis shows which product category contributes the highest overall revenue. This information helps management allocate inventory efficiently and focus promotional campaigns on high-performing categories.
+
 ## 🎓 What I Learned
 
 Working on this project helped me strengthen my understanding of SQL beyond basic queries. I gained hands-on experience in creating databases, cleaning datasets, analyzing business problems, and communicating insights through structured SQL analysis.
