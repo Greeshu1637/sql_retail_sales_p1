@@ -330,9 +330,80 @@ During the database design phase, the following SQL and database management skil
 
 # 🧹 Data Cleaning
 
-Before performing analysis, the dataset was validated to ensure data quality. Checks were performed for missing values, inconsistent records, and duplicate transactions.
+Before beginning the analysis, the dataset was carefully validated to ensure data quality and consistency. Cleaning the data before performing any business analysis helps prevent inaccurate results and improves the reliability of insights.
 
-The following SQL queries were used during the cleaning process.
+The following validation steps were performed using PostgreSQL.
+
+---
+
+## Data Cleaning Objectives
+
+The primary goals of the data cleaning process were to:
+
+- Verify successful data import.
+- Check the total number of records.
+- Identify missing (NULL) values.
+- Remove incomplete records.
+- Validate the cleaned dataset before analysis.
+
+---
+
+## Data Validation Process
+
+The following SQL operations were performed during the cleaning phase:
+
+### 1. Dataset Verification
+
+The complete dataset was reviewed after importing the CSV file into PostgreSQL to ensure all records were imported correctly.
+
+### 2. Record Count Validation
+
+The total number of records was counted to verify that the import process completed successfully.
+
+### 3. Missing Value Detection
+
+Each important column was checked for NULL values, including:
+
+- Sale Date
+- Sale Time
+- Customer ID
+- Gender
+- Age
+- Category
+- Quantity
+- Price Per Unit
+- COGS
+- Total Sales
+
+### 4. Removing Incomplete Records
+
+Records containing missing values were removed to ensure that only complete transactions were used for analysis.
+
+### 5. Final Validation
+
+After cleaning, the dataset was verified once again to confirm that it was ready for exploratory and business analysis.
+
+---
+
+## SQL Data Cleaning Script
+
+The following screenshot shows the SQL queries used during the data cleaning process.
+
+## Clean Dataset Verification
+
+The final validation confirms that the cleaned dataset contains **1987 complete transaction records**, which were used for the subsequent analysis.
+
+![Clean Dataset](images/clean_dataset.png)
+
+---
+
+## Outcome
+
+After completing the cleaning process:
+
+- The dataset contained only complete transaction records.
+- No missing values remained in the analytical dataset.
+- The cleaned data was ready for exploratory analysis and business reporting.
 
 ![Data Cleaning](images/data_cleaning.png)
 
