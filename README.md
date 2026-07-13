@@ -63,6 +63,11 @@ The dataset includes attributes such as:
 The dataset was imported into PostgreSQL and analyzed using SQL queries executed in pgAdmin 4.
 
 ---
+## 📊 Total Records Imported
+
+The dataset was successfully imported into PostgreSQL and verified before analysis.
+
+![Total Records](images/row_count.png)
 
 ## 🛠️ Tools & Technologies
 
@@ -139,6 +144,11 @@ A PostgreSQL database was created to store and analyze the retail sales dataset 
 The project consists of a single transactional table named **retail_sales**, where each row represents one completed customer purchase.
 
 Although this project uses a single-table design, the database structure follows standard relational database principles with clearly defined columns and appropriate data types.
+## 🖥️ PostgreSQL Database
+
+The project database was created and managed using PostgreSQL using pgAdmin 4.
+
+![PostgreSQL Database](images/pgadmin_dashboard.png)
 
 ---
 
@@ -158,6 +168,11 @@ Although this project uses a single-table design, the database structure follows
 | cogs            | NUMERIC   | Cost of goods sold                     |
 | total_sale      | NUMERIC   | Total transaction amount               |
 
+## 🗂️ Table Structure
+
+The `retail_sales` table contains 11 columns that store transaction-level information required for retail sales analysis.
+
+![Table Structure](images/table_structure.png)
 ---
 
 ## Primary Key
@@ -216,6 +231,11 @@ The database setup involved the following steps:
 5. Verifying successful data import.
 6. Validating the table structure and row count before beginning analysis.
 
+## ⚙️ Database Creation
+
+The following screenshot shows the SQL script used to create the `retail_sales` table in PostgreSQL.
+
+![Database Creation](images/create_table.png)
 ---
 
 ## Data Dictionary
@@ -306,7 +326,15 @@ During the database design phase, the following SQL and database management skil
 * Data validation
 * Database documentation
 * PostgreSQL administration using pgAdmin 4
+---
 
+# 🧹 Data Cleaning
+
+Before performing analysis, the dataset was validated to ensure data quality. Checks were performed for missing values, inconsistent records, and duplicate transactions.
+
+The following SQL queries were used during the cleaning process.
+
+![Data Cleaning](images/data_cleaning.png)
 
 ## 🎓 What I Learned
 
@@ -315,3 +343,20 @@ Working on this project helped me strengthen my understanding of SQL beyond basi
 The project also improved my ability to think from a business perspective by converting raw transactional data into meaningful information that can support decision-making.
 
 This project represents an important step in building my portfolio for Data Analyst roles and reflects my practical experience with PostgreSQL and data analysis.
+---
+
+# 📈 Sample Business Analysis
+
+### Revenue by Product Category
+
+The following SQL query calculates the total revenue and total number of orders for each product category.
+
+![Revenue Analysis](images/query_output1.png)
+
+---
+
+### Highest Average Sales Month
+
+Using PostgreSQL window functions, the following query identifies the month with the highest average sales for each year.
+
+![Monthly Sales Analysis](images/query_output2.png)
