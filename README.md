@@ -1,5 +1,9 @@
 # 🛒 Retail Sales Analysis using SQL (PostgreSQL)
 
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)
+![SQL](https://img.shields.io/badge/SQL-Advanced-green)
+![Status](https://img.shields.io/badge/Project-Completed-success)
+A complete end-to-end SQL data analysis project built using PostgreSQL and pgAdmin 4 to analyze retail sales data, generate business insights, and demonstrate practical SQL skills for Data Analyst roles.
 ## 📌 Project Overview
 
 Data plays a crucial role in helping businesses understand customer behavior and make informed decisions. In this project, I performed an end-to-end retail sales analysis using **PostgreSQL** in **pgAdmin 4**. The objective was to transform raw sales data into meaningful business insights by designing a database, cleaning the data, writing analytical SQL queries, and interpreting the results.
@@ -9,7 +13,25 @@ Instead of simply retrieving records, this project focuses on answering practica
 Throughout this project, I applied SQL concepts commonly used by Data Analysts in real-world business environments, including filtering, aggregation, grouping, sorting, conditional logic, date functions, Common Table Expressions (CTEs), and window functions where appropriate.
 
 ---
+## 📑 Table of Contents
 
+- Project Overview
+- Project Objectives
+- Business Problem
+- Dataset Information
+- Tools & Technologies
+- SQL Skills Demonstrated
+- Project Workflow
+- Database Design
+- Data Cleaning
+- Exploratory Data Analysis
+- Business Analysis
+- Key Insights
+- Business Recommendations
+- Future Improvements
+- Project Structure
+- How to Run
+- Author
 ## 🎯 Project Objectives
 
 The primary objectives of this project were:
@@ -166,13 +188,13 @@ The project database was created and managed using PostgreSQL using pgAdmin 4.
 | quantity        | INTEGER   | Number of products purchased           |
 | price_per_unit  | NUMERIC   | Selling price of a single unit         |
 | cogs            | NUMERIC   | Cost of goods sold                     |
-| total_sale      | NUMERIC   | Total transaction amount               |
+| total_sales      | NUMERIC   | Total transaction amount               |
 
 ## 🗂️ Table Structure
 
 The `retail_sales` table contains 11 columns that store transaction-level information required for retail sales analysis.
 
-![Table Structure](images/table_structure.png.png)
+![Table Structure](images/table_structure.png)
 ---
 
 ## Primary Key
@@ -557,19 +579,139 @@ Using PostgreSQL, multiple business questions were answered related to customer 
 The results demonstrate how SQL can be used not only for querying data but also for solving real-world business problems.
 
 
+# 📌 Key Insights
 
+The SQL analysis revealed several meaningful business insights from the retail sales dataset.
 
+## Key Findings
 
+### 📈 Product Performance
 
+- Revenue is not evenly distributed across product categories.
+- Certain categories consistently contribute a larger share of total sales.
+- High-performing product categories should receive greater inventory and marketing focus.
 
-### Business Insight
+---
 
-The highest revenue-generating age group represents the company's most valuable customer segment and can be targeted with personalized marketing campaigns.
+### 👥 Customer Behavior
 
+- Customer spending patterns differ across age groups.
+- A small group of customers contributes significantly more revenue than others.
+- Identifying high-value customers can support loyalty and retention strategies.
 
-### Business Insight
+---
 
-The analysis shows which product category contributes the highest overall revenue. This information helps management allocate inventory efficiently and focus promotional campaigns on high-performing categories.
+### 🛒 Sales Trends
+
+- Sales activity varies across different hours of the day.
+- Identifying peak shopping hours helps optimize staffing and operational planning.
+- Monthly revenue trends can reveal seasonal purchasing behavior.
+
+---
+
+### 💰 Revenue Analysis
+
+- Average order values differ across product categories.
+- Revenue contribution analysis helps identify the products driving business growth.
+- SQL aggregation functions provide quick insights into overall business performance.
+
+---
+
+### 📊 Overall Conclusion
+
+The analysis demonstrates how SQL can transform raw transactional data into meaningful business insights. By combining data cleaning, exploratory analysis, and business-focused SQL queries, valuable information about customer behavior, product performance, and sales trends can be extracted to support data-driven decision-making.
+
+# 💡 Business Recommendations
+
+Based on the analysis, the following recommendations can help improve business performance.
+## Inventory Management
+
+- Maintain higher inventory levels for top-performing product categories.
+- Monitor low-performing categories and optimize stock levels to reduce carrying costs.
+## Marketing Strategy
+
+- Develop targeted promotional campaigns for the highest revenue-generating customer segments.
+- Offer personalized discounts and loyalty rewards to high-value customers.
+
+---
+
+## Sales Optimization
+
+- Schedule additional staff during peak shopping hours to improve customer service.
+- Use monthly sales trends to plan seasonal promotions and inventory replenishment.
+
+---
+
+## Customer Engagement
+
+- Build customer loyalty programs for repeat purchasers.
+- Analyze purchasing behavior regularly to improve customer retention.
+
+---
+
+## Future Business Growth
+
+- Integrate SQL analysis with Power BI dashboards for real-time business reporting.
+- Automate monthly sales reports using PostgreSQL queries.
+- Expand customer segmentation using additional demographic and behavioral data.
+
+# 🚀 Future Improvements
+
+This project can be extended further by implementing additional analytics and visualization features.
+
+Possible future enhancements include:
+
+- Develop an interactive Power BI dashboard connected to PostgreSQL.
+- Perform sales forecasting using Python and Machine Learning.
+- Create stored procedures and SQL views for automated reporting.
+- Build a complete ETL pipeline for automated data updates.
+- Analyze customer lifetime value and retention metrics.
+- Perform advanced sales trend forecasting using time-series analysis.
+
+  # 📂 Project Structure
+
+```
+sql_retail_sales_p1
+│
+├── README.md
+├── database_setup.sql
+├── data_cleaning.sql
+├── eda_queries.sql
+├── analysis_queries.sql
+├── insights.md
+├── SQL - Retail Sales Analysis_utf.csv
+└── images
+    ├── row_count.png
+    ├── pgadmin_dashboard.png
+    ├── table_structure.png
+    ├── create_table.png
+    ├── data_cleaning.png
+    ├── clean_dataset.png
+    ├── eda_total_transactions.png
+    ├── eda_customers.png
+    ├── eda_categories.png
+    ├── eda_date_range.png
+    ├── business_q1.png
+    ├── business_q2.png
+    ├── business_q3.png
+    ├── business_q4.png
+    ├── business_q5.png
+    ├── business_q6.png
+    ├── business_q7.png
+    └── business_q8.png
+```
+
+---
+
+# ▶️ How to Run This Project
+
+1. Install PostgreSQL and pgAdmin 4.
+2. Create a new PostgreSQL database.
+3. Execute `database_setup.sql` to create the required table.
+4. Import the retail sales CSV dataset into PostgreSQL.
+5. Run `data_cleaning.sql` to validate and clean the data.
+6. Execute `eda_queries.sql` to explore the dataset.
+7. Run `analysis_queries.sql` to answer business questions and generate insights.
 
 ## 🎓 What I Learned
 
@@ -580,18 +722,23 @@ The project also improved my ability to think from a business perspective by con
 This project represents an important step in building my portfolio for Data Analyst roles and reflects my practical experience with PostgreSQL and data analysis.
 ---
 
-# 📈 Sample Business Analysis
 
-### Revenue by Product Category
 
-The following SQL query calculates the total revenue and total number of orders for each product category.
+# 👩‍💻 Author
 
-![Revenue Analysis](images/query_output1.png)
+**Greeshma**
 
----
+Aspiring Data Analyst with a strong interest in SQL, PostgreSQL, Python, Power BI, and data-driven decision-making.
 
-### Highest Average Sales Month
+### Connect with Me
 
-Using PostgreSQL window functions, the following query identifies the month with the highest average sales for each year.
+- GitHub: https://github.com/Greeshu1637
+- LinkedIn: https://www.linkedin.com/in/greeshma-polanki-7931a8373/
+  ## 📊 Project Statistics
 
-![Monthly Sales Analysis](images/query_output2.png)
+- Database: PostgreSQL
+- Tool: pgAdmin 4
+- Records Analyzed: 1987
+- SQL Queries Written: 25+
+- Business Questions Answered: 8
+- Database Tables: 1
