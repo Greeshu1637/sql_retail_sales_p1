@@ -1,29 +1,42 @@
 /*
-====================================================
-Retail Sales Analysis
-Data Cleaning Script
-Database : PostgreSQL
-Tool     : pgAdmin 4
-====================================================
+===============================================================================
+Project      : Retail Sales Performance Analysis using SQL
+Database     : PostgreSQL
+Author       : Greeshma Polanki
+Description  :
+This script performs initial data validation and cleaning on the
+retail_sales table before exploratory and business analysis.
+
+The objective is to identify missing values, remove incomplete
+records, and verify the dataset is ready for analysis.
+
+Tools Used   : PostgreSQL, pgAdmin 4
+===============================================================================
 */
 
-----------------------------------------------------
--- 1. View Complete Dataset
-----------------------------------------------------
+-- ============================================================================
+-- STEP 1: Preview Dataset
+-- Purpose:
+-- Verify that the dataset has been imported successfully.
+-- ============================================================================
 
 SELECT *
 FROM retail_sales;
 
-----------------------------------------------------
--- 2. Count Total Records
-----------------------------------------------------
+-- ============================================================================
+-- STEP 2: Count Total Records
+-- Purpose:
+-- Determine the total number of transactions before cleaning.
+-- ============================================================================
 
-SELECT COUNT(*)
+SELECT COUNT(*) AS total_records
 FROM retail_sales;
 
-----------------------------------------------------
--- 3. Check for Missing (NULL) Values
-----------------------------------------------------
+-- ============================================================================
+-- STEP 3: Identify Missing Values
+-- Purpose:
+-- Detect incomplete records containing NULL values.
+-- ============================================================================
 
 SELECT *
 FROM retail_sales
@@ -37,11 +50,13 @@ WHERE
     OR quantity IS NULL
     OR price_per_unit IS NULL
     OR cogs IS NULL
-    OR total_sales IS NULL;
+    OR total_sale IS NULL;
 
-----------------------------------------------------
--- 4. Remove Incomplete Records
-----------------------------------------------------
+-- ============================================================================
+-- STEP 4: Remove Incomplete Records
+-- Purpose:
+-- Delete records containing missing values to improve data quality.
+-- ============================================================================
 
 DELETE
 FROM retail_sales
@@ -55,112 +70,17 @@ WHERE
     OR quantity IS NULL
     OR price_per_unit IS NULL
     OR cogs IS NULL
-    OR total_sales IS NULL;
+    OR total_sale IS NULL;
 
-----------------------------------------------------
--- 5. Verify Clean Dataset
-----------------------------------------------------
+-- ============================================================================
+-- STEP 5: Verify Clean Dataset
+-- Purpose:
+-- Confirm the remaining number of valid records after cleaning.
+-- ============================================================================
 
-SELECT COUNT(*)
+SELECT COUNT(*) AS cleaned_records
 FROM retail_sales;
 
-# 📊 Exploratory Data Analysis (EDA)
-
-## Overview
-
-After cleaning and validating the dataset, Exploratory Data Analysis (EDA) was performed to understand the overall characteristics of the retail sales data before conducting business analysis.
-
-The objective of this phase was to summarize the dataset, identify sales patterns, and understand customer purchasing behavior using SQL queries in PostgreSQL.
-
----
-
-## Objectives of EDA
-
-The exploratory analysis aimed to answer the following questions:
-
-- How many sales transactions are present?
-- How many unique customers made purchases?
-- Which product categories are available?
-- What is the overall sales distribution?
-- Which time periods generated the highest sales?
-- How are customers distributed across different age groups?
-
----
-
-## SQL Concepts Used
-
-The following SQL concepts were applied during the exploratory analysis:
-
-- SELECT
-- DISTINCT
-- COUNT()
-- SUM()
-- AVG()
-- MIN()
-- MAX()
-- GROUP BY
-- ORDER BY
-- Aggregate Functions
-- Date Functions
-
----
-
-## Exploratory Questions
-
-The following SQL queries were used to better understand the dataset before performing business analysis.
-
-### 1. Total Number of Sales Transactions
-
-Purpose:
-Determine the total number of transactions available for analysis.
-
----
-
-### 2. Total Number of Customers
-
-Purpose:
-Identify how many unique customers are present in the dataset.
-
----
-
-### 3. Product Categories
-
-Purpose:
-Understand which product categories are available.
-
----
-
-### 4. Sales Date Range
-
-Purpose:
-Identify the earliest and latest transaction dates.
-
----
-
-### 5. Customer Demographics
-
-Purpose:
-Explore customer distribution by gender and age.
-
----
-
-### 6. Overall Sales Statistics
-
-Purpose:
-Calculate total revenue, average sales value, minimum sale, and maximum sale amount.
-
----
-
-## Outcome of EDA
-
-The exploratory analysis helped develop a better understanding of the dataset before moving into business-focused analysis.
-
-Key observations included:
-
-- The dataset contains complete retail transaction records.
-- Multiple product categories contribute to total sales.
-- Customers belong to different demographic groups.
-- Sales transactions span multiple months and years.
-- The cleaned dataset is suitable for business analysis.
-
-EDA provided the foundation for answering business questions using SQL.
+-- ============================================================================
+-- End of Data Cleaning Script
+-- ============================================================================
