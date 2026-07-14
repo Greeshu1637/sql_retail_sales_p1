@@ -172,7 +172,7 @@ The project database was created and managed using PostgreSQL using pgAdmin 4.
 
 The `retail_sales` table contains 11 columns that store transaction-level information required for retail sales analysis.
 
-![Table Structure](images/table_structure.png)
+![Table Structure](images/table_structure.png.png)
 ---
 
 ## Primary Key
@@ -393,7 +393,7 @@ The following screenshot shows the SQL queries used during the data cleaning pro
 
 The final validation confirms that the cleaned dataset contains **1987 complete transaction records**, which were used for the subsequent analysis.
 
-![Clean Dataset](images/clean_dataset.png)
+![Clean Dataset](images/clean_dataset.png.png)
 
 ---
 
@@ -409,19 +409,19 @@ After completing the cleaning process:
 
 ### Total Transactions
 
-![Total Transactions](images/eda_total_transactions.png)
+![Total Transactions](images/eda_total_transactions.png.png)
 
 ---
 
 ### Unique Customers
 
-![Customers](images/eda_customers.png)
+![Customers](images/eda_customers.png.png)
 
 ---
 
 ### Product Categories
 
-![Categories](images/eda_categories.png)
+![Categories](images/eda_categories.png.png)
 
 ---
 
