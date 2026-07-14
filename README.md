@@ -369,18 +369,7 @@ The primary goals of the data cleaning process were to:
 - Validate the cleaned dataset before analysis.
 
 ---
-## 📊 Exploratory Data Analysis (EDA)
 
-After cleaning the dataset, exploratory analysis was performed to understand sales trends, customer behavior, and overall data characteristics before conducting business analysis.
-
-### Objectives
-
-- Determine total sales transactions
-- Identify unique customers
-- Explore product categories
-- Analyze sales date range
-- Review customer demographics
-- Calculate overall sales statistics
 
 ## Data Validation Process
 
@@ -464,6 +453,61 @@ After completing the cleaning process:
 ![Date Range](images/eda_date_range.png.png)
 
 ![Data Cleaning](images/data_cleaning.png.png)
+
+---
+
+# 📊 Exploratory Data Analysis (EDA)
+
+## Overview
+
+After cleaning and validating the dataset, Exploratory Data Analysis (EDA) was performed to understand the overall characteristics of the retail sales data before conducting business analysis.
+
+The objective of this phase was to summarize the dataset, identify sales patterns, and understand customer purchasing behavior using SQL queries in PostgreSQL.
+
+---
+
+## Objectives of EDA
+
+The exploratory analysis aimed to answer the following questions:
+
+- How many sales transactions are present?
+- How many unique customers made purchases?
+- Which product categories are available?
+- What is the overall sales distribution?
+- Which time periods generated the highest sales?
+- How are customers distributed across different age groups?
+
+---
+
+## SQL Concepts Used
+
+The following SQL concepts were applied during the exploratory analysis:
+
+- SELECT
+- DISTINCT
+- COUNT()
+- SUM()
+- AVG()
+- MIN()
+- MAX()
+- GROUP BY
+- ORDER BY
+- Aggregate Functions
+- Date Functions
+
+---
+
+## Outcome of EDA
+
+The exploratory analysis provided a clear understanding of the dataset before moving into business-focused analysis.
+
+Key observations included:
+
+- The dataset contains complete retail transaction records.
+- Multiple product categories contribute to overall sales.
+- Customer demographics are diverse across age groups and gender.
+- Sales transactions span multiple time periods, enabling trend analysis.
+- The cleaned dataset is suitable for business analysis and reporting.
 
 # 📈 Business Analysis
 
