@@ -369,6 +369,18 @@ The primary goals of the data cleaning process were to:
 - Validate the cleaned dataset before analysis.
 
 ---
+## 📊 Exploratory Data Analysis (EDA)
+
+After cleaning the dataset, exploratory analysis was performed to understand sales trends, customer behavior, and overall data characteristics before conducting business analysis.
+
+### Objectives
+
+- Determine total sales transactions
+- Identify unique customers
+- Explore product categories
+- Analyze sales date range
+- Review customer demographics
+- Calculate overall sales statistics
 
 ## Data Validation Process
 
