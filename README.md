@@ -456,8 +456,8 @@ Understanding which product category generates the highest revenue helps busines
 See `analysis_queries.sql`
 
 ### Result
-
 ![Highest Revenue Category](images/business_q1.png)
+
 
 
 ## 2️⃣ Which Age Group Contributes the Highest Revenue?
@@ -472,14 +472,15 @@ See `analysis_queries.sql`
 
 ### Result
 
-(Add Screenshot)
+![Age Group Revenue](images/business_q2.png)
 
 ## 3️⃣ Which Hour Records the Highest Number of Sales?
 
 ### Business Objective
 
 Knowing peak sales hours helps businesses optimize staffing, inventory availability, and promotional timing.
-
+### Result
+![Peak Sales Hour](images/business_q3.png)
 ### Business Insight
 
 Peak shopping hours indicate when customer demand is highest, allowing businesses to improve operational planning.
@@ -490,7 +491,8 @@ Peak shopping hours indicate when customer demand is highest, allowing businesse
 ### Business Objective
 
 Average order value measures customer spending behavior across product categories.
-
+### Result
+![Average Order Value](images/business_q4.png)
 ### Business Insight
 
 Categories with higher average order values contribute more revenue per transaction and may offer better profit opportunities.
@@ -501,7 +503,8 @@ Categories with higher average order values contribute more revenue per transact
 ### Business Objective
 
 Identifying high-value customers helps businesses improve customer retention and loyalty programs.
-
+### Result
+![Top Customers](images/business_q5.png)
 ### Business Insight
 
 The highest-spending customers contribute significantly to total revenue and represent important long-term business relationships.
@@ -512,7 +515,8 @@ The highest-spending customers contribute significantly to total revenue and rep
 ### Business Objective
 
 Understanding product demand helps businesses improve inventory management.
-
+### Result
+![Highest Quantity Sold](images/business_q6.png)
 ### Business Insight
 
 High-demand categories require efficient stock planning to prevent shortages.
@@ -523,7 +527,8 @@ High-demand categories require efficient stock planning to prevent shortages.
 ### Business Objective
 
 Revenue contribution analysis identifies the importance of each product category.
-
+### Result
+![Revenue Contribution](images/business_q7.png)
 ### Business Insight
 
 Categories contributing the largest percentage of revenue should receive greater business attention.
@@ -533,7 +538,8 @@ Categories contributing the largest percentage of revenue should receive greater
 ### Business Objective
 
 Analyzing monthly revenue helps identify seasonal sales patterns.
-
+### Result
+![Monthly Revenue Trend](images/business_q8.png)
 ### Business Insight
 
 Understanding monthly trends enables better forecasting and business planning.
