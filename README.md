@@ -456,7 +456,7 @@ Understanding which product category generates the highest revenue helps busines
 See `analysis_queries.sql`
 
 ### Result
-![Highest Revenue Category](images/business_q1.png)
+![Highest Revenue Category](images/business_q1.png.png)
 
 
 
@@ -472,7 +472,7 @@ See `analysis_queries.sql`
 
 ### Result
 
-![Age Group Revenue](images/business_q2.png)
+![Age Group Revenue](images/business_q2.png.png)
 
 ## 3️⃣ Which Hour Records the Highest Number of Sales?
 
@@ -480,7 +480,7 @@ See `analysis_queries.sql`
 
 Knowing peak sales hours helps businesses optimize staffing, inventory availability, and promotional timing.
 ### Result
-![Peak Sales Hour](images/business_q3.png)
+![Peak Sales Hour](images/business_q3.png.png)
 ### Business Insight
 
 Peak shopping hours indicate when customer demand is highest, allowing businesses to improve operational planning.
@@ -492,7 +492,7 @@ Peak shopping hours indicate when customer demand is highest, allowing businesse
 
 Average order value measures customer spending behavior across product categories.
 ### Result
-![Average Order Value](images/business_q4.png)
+![Average Order Value](images/business_q4.png.png)
 ### Business Insight
 
 Categories with higher average order values contribute more revenue per transaction and may offer better profit opportunities.
@@ -504,7 +504,7 @@ Categories with higher average order values contribute more revenue per transact
 
 Identifying high-value customers helps businesses improve customer retention and loyalty programs.
 ### Result
-![Top Customers](images/business_q5.png)
+![Top Customers](images/business_q5.png.png)
 ### Business Insight
 
 The highest-spending customers contribute significantly to total revenue and represent important long-term business relationships.
@@ -516,7 +516,7 @@ The highest-spending customers contribute significantly to total revenue and rep
 
 Understanding product demand helps businesses improve inventory management.
 ### Result
-![Highest Quantity Sold](images/business_q6.png)
+![Highest Quantity Sold](images/business_q6.png.png)
 ### Business Insight
 
 High-demand categories require efficient stock planning to prevent shortages.
@@ -528,7 +528,7 @@ High-demand categories require efficient stock planning to prevent shortages.
 
 Revenue contribution analysis identifies the importance of each product category.
 ### Result
-![Revenue Contribution](images/business_q7.png)
+![Revenue Contribution](images/business_q7.png.png)
 ### Business Insight
 
 Categories contributing the largest percentage of revenue should receive greater business attention.
@@ -539,7 +539,7 @@ Categories contributing the largest percentage of revenue should receive greater
 
 Analyzing monthly revenue helps identify seasonal sales patterns.
 ### Result
-![Monthly Revenue Trend](images/business_q8.png)
+![Monthly Revenue Trend](images/business_q8.png.png)
 ### Business Insight
 
 Understanding monthly trends enables better forecasting and business planning.
