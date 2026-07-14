@@ -393,7 +393,7 @@ The following screenshot shows the SQL queries used during the data cleaning pro
 
 The final validation confirms that the cleaned dataset contains **1987 complete transaction records**, which were used for the subsequent analysis.
 
-![Clean Dataset](images/clean_dataset.png.png)
+![Clean Dataset](images/clean_dataset.png)
 
 ---
 
@@ -427,8 +427,9 @@ After completing the cleaning process:
 
 ### Dataset Time Period
 
-![Date Range](images/eda_date_range.png)
-![Data Cleaning](images/data_cleaning.png)
+![Date Range](images/eda_date_range.png.png)
+
+![Data Cleaning](images/data_cleaning.png.png)
 
 # 📈 Business Analysis
 
