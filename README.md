@@ -194,7 +194,7 @@ The project database was created and managed using PostgreSQL using pgAdmin 4.
 
 The `retail_sales` table contains 11 columns that store transaction-level information required for retail sales analysis.
 
-![Table Structure](images/table_structure.png)
+![Table Structure](images/table_structure.png.png)
 ---
 
 ## Primary Key
@@ -209,7 +209,7 @@ This ensures:
 
 ---
 
-## Table Structure
+## Table Description
 
 The table stores transactional information required for retail sales analysis.
 
