@@ -110,15 +110,172 @@ FROM retail_sales
 GROUP BY shift
 ORDER BY total_orders DESC;
 
-----------------------------------------------------
+/*
+==========================================================
+Retail Sales Analysis
+Business Analysis Queries
+Database : PostgreSQL
+Tool     : pgAdmin 4
+==========================================================
 -- Business Question 1
 -- Highest Revenue Category
 ----------------------------------------------------
 
 SELECT
     category,
-    SUM(total_sale) AS total_revenue
+    SUM(total_sales) AS total_revenue
 FROM retail_sales
 GROUP BY category
 ORDER BY total_revenue DESC;
+
+ALTER TABLE retail_sales
+RENAME COLUMN quantiy TO quantity;
+ALTER TABLE retail_sales
+ALTER COLUMN sale_time TYPE TIME
+USING sale_time::TIME;
+SELECT column_name, data_type
+FROM information_schema.columns
+WHERE table_name = 'retail_sales';
 --END PROJECT---
+
+
+/*
+==========================================================
+Retail Sales Analysis
+Business Analysis Queries
+Database : PostgreSQL
+Tool     : pgAdmin 4
+Author   : Greeshma
+==========================================================
+*/
+
+----------------------------------------------------------
+-- Business Question 1
+-- Which Product Category Generates the Highest Revenue?
+----------------------------------------------------------
+
+SELECT
+    category,
+    ROUND(SUM(total_sales),2) AS total_revenue
+FROM retail_sales
+GROUP BY category
+ORDER BY total_revenue DESC;
+
+----------------------------------------------------------
+-- Business Question 2
+-- Which Age Group Generates the Highest Revenue?
+----------------------------------------------------------
+
+SELECT
+CASE
+    WHEN age < 20 THEN 'Below 20'
+    WHEN age BETWEEN 20 AND 29 THEN '20-29'
+    WHEN age BETWEEN 30 AND 39 THEN '30-39'
+    WHEN age BETWEEN 40 AND 49 THEN '40-49'
+    ELSE '50+'
+END AS age_group,
+
+ROUND(SUM(total_sales),2) AS total_revenue
+
+FROM retail_sales
+
+GROUP BY age_group
+
+ORDER BY total_revenue DESC;
+
+----------------------------------------------------------
+-- Business Question 3
+-- Which Hour Has the Highest Number of Transactions?
+----------------------------------------------------------
+
+SELECT
+
+EXTRACT(HOUR FROM sale_time) AS sales_hour,
+
+COUNT(*) AS total_transactions
+
+FROM retail_sales
+
+GROUP BY sales_hour
+
+ORDER BY total_transactions DESC;
+
+----------------------------------------------------------
+-- Business Question 4
+-- Average Order Value by Category
+----------------------------------------------------------
+
+SELECT
+    category,
+    ROUND(AVG(total_sales)::numeric, 2) AS average_order_value
+FROM retail_sales
+GROUP BY category
+ORDER BY average_order_value DESC;
+----------------------------------------------------------
+-- Business Question 5
+-- Top 10 Highest Spending Customers
+----------------------------------------------------------
+SELECT
+    customer_id,
+    ROUND(SUM(total_sales)::numeric,2) AS total_spent
+FROM retail_sales
+GROUP BY customer_id
+ORDER BY total_spent DESC
+LIMIT 10;
+
+
+----------------------------------------------------------
+-- Business Question 6
+-- Which Product Category Sold the Highest Quantity?
+----------------------------------------------------------
+
+SELECT
+
+category,
+
+SUM(quantity) AS total_quantity_sold
+
+FROM retail_sales
+
+GROUP BY category
+
+ORDER BY total_quantity_sold DESC;
+
+----------------------------------------------------------
+-- Business Question 7
+-- Revenue Contribution by Category
+----------------------------------------------------------
+SELECT
+    category,
+
+    ROUND(SUM(total_sales)::numeric,2) AS total_revenue,
+
+    ROUND(
+        (
+            SUM(total_sales) * 100.0 /
+            SUM(SUM(total_sales)) OVER ()
+        )::numeric,
+        2
+    ) AS revenue_percentage
+
+FROM retail_sales
+
+GROUP BY category
+
+ORDER BY total_revenue DESC;
+
+----------------------------------------------------------
+-- Business Question 8
+-- Monthly Revenue Trend
+----------------------------------------------------------
+
+SELECT
+    TO_CHAR(sale_date,'YYYY-MM') AS sales_month,
+
+    ROUND(SUM(total_sales)::numeric,2) AS total_revenue
+
+FROM retail_sales
+
+GROUP BY sales_month
+
+ORDER BY sales_month;
